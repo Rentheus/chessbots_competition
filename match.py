@@ -25,9 +25,10 @@ class ChessBot:
 
     def generate_move(self, board: chess.Board, time_limit: int = 5) -> chess.Move:
         self.shared.best_move = None
-        process = multiprocessing.Process(target=self.logic_func, args=(self.shared, board))
-        process.start()
+        process = None
         try:
+            process = multiprocessing.Process(target=self.logic_func, args=(self.shared, board))
+            process.start()
             process.join(timeout=time_limit)
 
             if process.is_alive():
@@ -38,8 +39,9 @@ class ChessBot:
                 return self.shared.best_move
             print("Player did not make a move in time ... Choosing random move")
         except KeyboardInterrupt as exc:
-            process.terminate()
-            process.join()
+            if process:
+                process.terminate()
+                process.join()
             raise SystemExit from exc
         return random.choice(list(board.legal_moves))
 
