@@ -83,11 +83,11 @@ def main():
     elif board.is_insufficient_material():
         print('Draw by insufficient material!')
     elif board.is_stalemate():
-        print('Dray by stalemate!')
+        print('Draw by stalemate!')
     elif board.is_seventyfive_moves():
-        print('Dray by 75-move rule!')
+        print('Draw by 75-move rule!')
     elif board.is_fivefold_repetition():
-        print('Dray by 5-fold repetition!')
+        print('Draw by 5-fold repetition!')
     else:
         print('Unexpected game over!?')
     print("Match lasted for", len(board.move_stack), "turns.")

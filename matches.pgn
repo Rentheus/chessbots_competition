@@ -248,3 +248,23 @@
 
 1. g3 Nh6 2. Na3 Ng4 3. Bh3 Nh6 4. Bxd7+ Qxd7 5. f4 Rg8 6. d3 Rh8 7. g4 Qxg4 8. h3 Qg2 9. Kd2 Qxh1 10. c4 Bd7 11. Qf1 Bxh3 12. Nxh3 Qxf1 13. f5 Nxf5 14. e4 Qg2+ 15. Ke1 Qg3+ 16. Kd2 Qe3+ 17. Kc2 Nd4+ 18. Kc3 Ne2+ 19. Kb4 Nxc1 20. Rxc1 Qxc1 21. Ng1 Qxb2+ 22. Ka5 Nc6+ 23. Ka4 Qb4# 0-1
 
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 19:05:23.139969"]
+[Round "?"]
+[White "my_bot"]
+[Black "fick_sie_alle_bot"]
+[Result "0-1"]
+
+1. g4 Nh6 2. c4 Nxg4 3. Bh3 Nh6 4. Bxd7+ Qxd7 5. Na3 Rg8 6. Nb5 Qc6 7. Nxa7 Qxh1 8. Nxc8 Qxg1# 0-1
+
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 19:05:34.205029"]
+[Round "?"]
+[White "my_bot"]
+[Black "fick_sie_alle_bot"]
+[Result "0-1"]
+
+1. Nc3 Nh6 2. Ne4 Ng4 3. Nh3 Rg8 4. Nhg5 Rh8 5. Nxh7 Rxh7 6. Ng3 Nxh2 7. Rxh2 Rxh2 8. Nf5 Rh1 9. Nxg7+ Bxg7 10. d3 Nc6 11. f4 Rb8 12. a3 Ra8 13. Qd2 Rb8 14. Qa5 Nxa5 15. c4 Ra8 16. b4 Bc3+ 17. Kf2 Bd4+ 18. Be3 Bxa1 19. bxa5 a6 20. g4 Rh2+ 21. Bg2 Rb8 22. Kf1 Ra8 23. Bxb7 Bxb7 24. d4 Bg2+ 25. Kg1 Rh3 26. Kxg2 Rxe3 27. Kh1 Rxa3 28. e4 Rxa5 29. c5 Bxd4 30. f5 Rxc5 31. g5 Qc8 32. Kg2 Qd8 33. f6 Rxg5+ 34. Kf3 Bxf6 35. Kf2 Re5 36. Ke3 Bg5+ 37. Ke2 Rxe4+ 38. Kf3 Rf4+ 39. Kg2 Rg4+ 40. Kf2 Bh4+ 41. Ke3 Bg5+ 42. Ke2 Re4+ 43. Kd3 Re3+ 44. Kd2 Re6+ 45. Kd3 Rd6+ 46. Kc2 Rc6+ 47. Kb2 Qb8+ 48. Ka3 Rc4 49. Ka2 Qb5 50. Ka1 Kf8 51. Ka2 Kg8 52. Ka3 Kh8 53. Ka2 Kg8 54. Ka1 Kh8 55. Ka2 Kg8 56. Ka3 Kh8 57. Ka2 Kg8 58. Ka3 Kh8 59. Ka2 Kh7 60. Ka1 Rh8 61. Ka2 Rg8 62. Ka3 Rh8 63. Ka2 Rg8 64. Ka1 Rh8 65. Ka2 Rg8 66. Ka1 Rh8 67. Ka2 Rg8 68. Ka1 Rf8 69. Ka2 Rh8 70. Ka1 Rg8 71. Ka2 Rh8 72. Ka3 Rg8 73. Ka2 Rh8 74. Ka1 Rg8 75. Ka2 Rh8 76. Ka1 Rg8 77. Ka2 Rf8 78. Ka3 Re8 79. Ka2 Rf8 80. Ka3 Re8 81. Ka2 Rf8 82. Ka1 Re8 83. Ka2 Rf8 84. Ka1 Re8 85. Ka2 Rd8 86. Ka1 Rf8 87. Ka2 Re8 88. Ka1 Rf8 89. Ka2 Re8 90. Ka3 Rf8 91. Ka2 Re8 92. Ka1 Rd8 93. Ka2 Re8 94. Ka3 Rd8 95. Ka2 Rc8 96. Ka1 Rd8 97. Ka2 Rc8 98. Ka1 Rd8 99. Ka2 Rc8 100. Ka1 Rb8 101. Ka2 Rd8 102. Ka1 Rc8 103. Ka2 Rd8 104. Ka1 Rc8 105. Ka2 Rd8 106. Ka1 Rc8 107. Ka2 Rb8 108. Ka3 Rc8 109. Ka2 Rb8 110. Ka3 Ra8 111. Ka2 Rc8 112. Ka3 Ra4# 0-1
+
