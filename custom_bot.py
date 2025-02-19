@@ -31,8 +31,3 @@ def my_bot(shared, board: chess.Board):
             best_score = score
             shared.best_move = move
         board.pop()
-
-BOTS = {
-    "bad_bot":bad_bot,
-    "my_bot":my_bot
-}

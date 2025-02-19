@@ -6,7 +6,13 @@ import multiprocessing
 import random
 import chess
 import chess.pgn
-from custom_bot import bad_bot, my_bot, BOTS
+from custom_bot import bad_bot, my_bot
+
+
+BOTS = {
+    "bad_bot": bad_bot,
+    "my_bot" : my_bot
+}
 
 class ChessBot:
     def __init__(self, logic_func, name = "Bot") -> None:
@@ -20,15 +26,20 @@ class ChessBot:
         self.shared.best_move = None
         process = multiprocessing.Process(target=self.logic_func, args=(self.shared, board))
         process.start()
-        process.join(timeout=time_limit)
+        try:
+            process.join(timeout=time_limit)
 
-        if process.is_alive():
+            if process.is_alive():
+                process.terminate()
+                process.join()
+
+            if self.shared.best_move is not None:
+                return self.shared.best_move
+            print("Player did not make a move in time ... Choosing random move")
+        except KeyboardInterrupt as exc:
             process.terminate()
             process.join()
-
-        if self.shared.best_move is not None:
-            return self.shared.best_move
-        print("Player did not make a move in time ... Choosing random move")
+            raise SystemExit from exc
         return random.choice(list(board.legal_moves))
 
 
