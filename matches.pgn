@@ -38,3 +38,13 @@
 
 1. g4 Nc6 2. d3 Nb8 3. e4 f5 4. exf5 b6 5. d4 a6 6. Bxa6 Rxa6 7. Bh6 Nxh6 8. Qd2 Nxg4 9. f4 Nxh2 10. Qxh2 Rxa2 11. Rxa2 e5 12. dxe5 h6 13. Qxh6 Rxh6 14. Rxh6 gxh6 15. Ra6 Bxa6 16. c4 Bxc4 17. Nf3 h5 18. b3 Bxb3 19. Ng1 Kf7 20. Ke2 Bc2 21. Kf2 Bxb1 22. e6+ dxe6 23. fxe6+ Kxe6 24. Ke3 Bh6 25. Nh3 Bxf4+ 26. Kxf4 Qe8 27. Nf2 Kd5 28. Nh3 Nd7 29. Kg3 Nf8 30. Kh4 Ke4 31. Nf4 Kxf4 32. Kh3 Kf5 33. Kg3 Qc6 34. Kh4 Kf6 35. Kxh5 Bc2 36. Kh6 Qc5 1/2-1/2
 
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 16:27:34.556897"]
+[Round "?"]
+[White "my_bot"]
+[Black "my_bot"]
+[Result "1/2-1/2"]
+
+1. d4 a6 2. Nc3 h5 3. f3 b5 4. Nxb5 axb5 5. Bd2 Rxa2 6. Rxa2 f5 7. Nh3 Rh7 8. Ra6 Bxa6 9. Bh6 Rxh6 10. Nf2 d5 11. Kd2 Re6 12. g3 Rxe2+ 13. Bxe2 h4 14. Bxb5+ Bxb5 15. gxh4 c5 16. dxc5 Kd7 17. Ng4 fxg4 18. fxg4 Ba6 19. Qb1 g6 20. Ke3 Bb7 21. c6+ Nxc6 22. h3 Kc8 23. b4 Nxb4 24. Qxb4 Qa5 25. Qxa5 e5 26. Qxd5 Bxd5 27. Rf1 e4 28. Rxf8+ Kb7 29. Rxg8 Bxg8 30. Kxe4 Ka6 31. c3 Bh7 32. Kd3 Kb5 33. Ke3 Kc5 34. c4 Kxc4 35. Ke4 Bg8 36. Ke5 g5 37. hxg5 Bh7 38. Kf4 Bg8 39. Ke5 Be6 40. Kxe6 Kd4 41. Kd7 Kc4 42. g6 Kc3 43. Kc7 Kb4 44. Kc8 Ka4 45. Kc7 Kb5 46. g5 Kc5 47. Kd8 Kd4 48. Kc8 Kd3 49. h4 Ke3 50. Kb8 Ke2 51. Ka8 Ke3 52. Kb7 Kd3 53. Ka7 Ke2 54. Kb7 Kd3 55. Kb8 Ke3 56. Ka7 Ke2 57. Kb6 Kf1 58. Kc5 Kg1 59. Kb4 Kf1 60. Kc3 Ke2 61. Kd4 Kf1 62. Ke5 Ke1 63. Kd5 Kd2 64. Kc4 Ke1 65. Kb3 Ke2 66. Ka4 Kf1 67. Ka3 Ke2 68. Kb4 Kf3 69. Kc3 Kg4 70. Kb3 Kxh4 71. Ka4 Kxg5 72. Kb3 Kxg6 1/2-1/2
+
