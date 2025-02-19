@@ -7,12 +7,13 @@ import random
 import chess
 import chess.pgn
 from datetime import datetime
-from custom_bot import bad_bot, my_bot
+from custom_bot import bad_bot, my_bot, fick_sie_alle_bot
 
 
 BOTS = {
-    "bad_bot": bad_bot,
-    "my_bot" : my_bot
+    "bad_bot"          : bad_bot,
+    "my_bot"           : my_bot,
+    "fick_sie_alle_bot": fick_sie_alle_bot,
 }
 
 class ChessBot:
@@ -59,7 +60,7 @@ def main():
     game = chess.pgn.Game()
     game.headers["Event"] = "CHESSBOT_COMPETITON"
     game.headers["White"] = "my_bot"
-    game.headers["Black"] = "my_bot"
+    game.headers["Black"] = "fick_sie_alle_bot"
     game.headers["Date"] = datetime.now()
     node = game
 
@@ -73,7 +74,7 @@ def main():
 
     while not board.is_game_over():
         print("Player Turn:", "WHITE" if board.turn else "BLACK")
-        board.push(player[board.turn].generate_move(board.copy()))
+        board.push(player[board.turn].generate_move(board.copy(), 1))
         print_board(board)
         node = node.add_variation(board.peek())
 
@@ -89,6 +90,7 @@ def main():
         print('Dray by 5-fold repetition!')
     else:
         print('Unexpected game over!?')
+    print("Match lasted for", len(board.move_stack), "turns.")
 
     game.headers["Result"] = board.result()
 
