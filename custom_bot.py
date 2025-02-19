@@ -23,10 +23,11 @@ def my_bot(shared, board: chess.Board):
         board.push(move)
         score = 0
         for piece in board.piece_map().values():
-            if piece.color == board.turn:
+            if piece.color != board.turn:
                 score += piece.piece_type
             else:
                 score -= piece.piece_type
+        score += random.random()
         if score > best_score:
             best_score = score
             shared.best_move = move

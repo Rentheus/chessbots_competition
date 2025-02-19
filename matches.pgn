@@ -8,3 +8,33 @@
 
 1. Nh3 Nh6 2. Ng5 Rg8 3. Ne6 Rh8 4. Ng5 Rg8 5. Ne6 Rh8 6. Ng5 Rg8 7. Ne6 Rh8 8. Ng5 Rg8 9. Ne6 Rh8 10. Ng5 Rg8 1/2-1/2
 
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 15:45:28.479013"]
+[Round "?"]
+[White "my_bot"]
+[Black "my_bot"]
+[Result "1/2-1/2"]
+
+1. Nh3 Nh6 2. Ng5 Rg8 3. Ne6 Rh8 4. Ng5 Rg8 5. Ne6 Rh8 6. Ng5 Rg8 7. Ne6 Rh8 8. Ng5 Rg8 9. Ne6 Rh8 10. Ng5 Rg8 1/2-1/2
+
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 15:56:55.762600"]
+[Round "?"]
+[White "my_bot"]
+[Black "my_bot"]
+[Result "1/2-1/2"]
+
+1. Nh3 Nh6 2. Ng5 Rg8 3. Nxh7 Rh8 4. Nxf8 Rxf8 5. Rg1 Rh8 6. Rh1 Rg8 7. Rg1 Rh8 8. Rh1 Rg8 9. Rg1 Rh8 10. Rh1 Rg8 11. Rg1 Rh8 12. Rh1 Rg8 13. Rg1 Rh8 1/2-1/2
+
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-19 15:58:37.949615"]
+[Round "?"]
+[White "my_bot"]
+[Black "my_bot"]
+[Result "1/2-1/2"]
+
+1. g4 Nc6 2. d3 Nb8 3. e4 f5 4. exf5 b6 5. d4 a6 6. Bxa6 Rxa6 7. Bh6 Nxh6 8. Qd2 Nxg4 9. f4 Nxh2 10. Qxh2 Rxa2 11. Rxa2 e5 12. dxe5 h6 13. Qxh6 Rxh6 14. Rxh6 gxh6 15. Ra6 Bxa6 16. c4 Bxc4 17. Nf3 h5 18. b3 Bxb3 19. Ng1 Kf7 20. Ke2 Bc2 21. Kf2 Bxb1 22. e6+ dxe6 23. fxe6+ Kxe6 24. Ke3 Bh6 25. Nh3 Bxf4+ 26. Kxf4 Qe8 27. Nf2 Kd5 28. Nh3 Nd7 29. Kg3 Nf8 30. Kh4 Ke4 31. Nf4 Kxf4 32. Kh3 Kf5 33. Kg3 Qc6 34. Kh4 Kf6 35. Kxh5 Bc2 36. Kh6 Qc5 1/2-1/2
+
