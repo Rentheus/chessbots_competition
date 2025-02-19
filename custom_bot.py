@@ -97,13 +97,14 @@ def fick_sie_alle_bot(shared, board: chess.Board) -> None:
 
     for move in board.legal_moves:
         board.push(move)
-        score = mm(board, 2, -math.inf, math.inf, False, color)
+        score = mm(board, 2, -math.inf, math.inf, False, color) + random.random()/2
         if board.is_check():
             score += 0.5
         board.pop()
 
         mmove = chess.Move.from_uci(str(move))
-        if board.piece_at(mmove.from_square).symbol() == chess.Piece(chess.KING, board.turn).symbol():
+        if board.piece_at(mmove.from_square).symbol() == \
+            chess.Piece(chess.KING, board.turn).symbol():
             score -= 0.5
             if chess.square_distance(mmove.from_square, mmove.to_square) > 1:
                 score += 1.5
