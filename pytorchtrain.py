@@ -45,7 +45,7 @@ def fenToVec(fen):
 	l = np.concatenate(l)
 	return l
 
-arr = np.loadtxt("posval.csv", delimiter=",", dtype=str)
+arr = np.loadtxt("posval.csv2", delimiter=",", dtype=str)
 
 positions = []
 value = []
@@ -74,11 +74,11 @@ model_0 = nn.Sequential(
     #nn.Conv2d(768,768, 3),
     #nn.Conv2d(12, 32, kernel_size=3, padding=1),
     nn.Linear(768,133),
-    nn.LogSigmoid(),
-    nn.Linear(133,137),
-    nn.SELU(),
-    nn.Linear(137,16),
-    nn.LeakyReLU(),
+    nn.Mish(),
+    nn.Linear(133,64),
+    nn.Mish(),
+    nn.Linear(64,16),
+    nn.Mish(),
     nn.Linear(16,1)
    # nn.Linear(in_features=768, out_features=300),
    # nn.LeakyReLU(),
@@ -95,11 +95,11 @@ model_0 = nn.Sequential(
    # nn.Linear(in_features=32, out_features=1)
 )
 
-loss_fn = nn.MSELoss()
-optimizer = torch.optim.SGD(params = model_0.parameters(), lr = 0.005)
+loss_fn = nn.L1Loss()
+optimizer = torch.optim.SGD(params = model_0.parameters(), lr = 0.015)
 
 
-epochs= 1900
+epochs= 10000
 train_loss_values = []
 test_loss_values = []
 epoch_count = []
@@ -142,7 +142,7 @@ for epoch in range(epochs):
 MODEL_PATH = Path("models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
 
-MODEL_NAME = "01_pytorch_workflow_model_0.pth"
+MODEL_NAME = "01_pytorch_workflow_model_1.pth"
 MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
 torch.save(obj=model_0.state_dict(), # only saving the state_dict() only saves the models learned parameters
            f=MODEL_SAVE_PATH) 

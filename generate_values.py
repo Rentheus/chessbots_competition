@@ -10,10 +10,13 @@ pgn = open("lichess_elite_2020-07.pgn")
 posval = []
 
 num = 0
-for i in range(48):
-    game = chess.pgn.read_game(pgn)
 
-for i in range(12):
+
+
+
+
+
+for i in range(420):
     game = chess.pgn.read_game(pgn)
     board = game.board()
     for move in game.mainline_moves():
@@ -21,13 +24,19 @@ for i in range(12):
         stockfish.set_fen_position(board.fen())
         advantage = stockfish.get_evaluation()
         if advantage["type"] == "mate":
-            posval.append([board.fen(), 5*advantage["value"]])
+            posval.append([board.fen(), 50*advantage["value"]])
         else:
             posval.append([board.fen(), advantage["value"]/100])
     posval[-1][1] = 20
 
+    if i%12 == 0:
+        with open("posval.csv2", "a", newline="") as csvf:
+            writer = csv.writer(csvf)
+            writer.writerows(posval)
+        posval = []
 
 
-with open("posval.csv", "a", newline="") as csvf:
-    writer = csv.writer(csvf)
-    writer.writerows(posval)
+
+#with open("posval.csv", "a", newline="") as csvf:
+#    writer = csv.writer(csvf)
+#    writer.writerows(posval)

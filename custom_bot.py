@@ -79,7 +79,42 @@ def better_rand_bot(shared, board: chess.Board):
             vec = fenToVec(board.fen())
 
         
-            score = -loaded_model_0(torch.tensor(vec).type(torch.float))
+            score = -(loaded_model_0(torch.tensor(vec).type(torch.float))).item()
+
+            if score > best_score:
+                best_score = score
+                shared.best_move = move
+                print(score)
+            board.pop()
+
+
+def better_rand_bot2(shared, board: chess.Board):
+    """
+    example of a better bot that makes moves based on the number of pieces
+    """
+
+
+    best_score = -math.inf
+    loaded_model_0 = nn.Sequential(
+    nn.Linear(768,133),
+    nn.Mish(),
+    nn.Linear(133,64),
+    nn.Mish(),
+    nn.Linear(64,16),
+    nn.Mish(),
+    nn.Linear(16,1)
+                )
+    loaded_model_0.load_state_dict(torch.load(f="models/01_pytorch_workflow_model_1.pth"))
+    loaded_model_0.eval()
+    with torch.inference_mode():
+
+        for move in board.legal_moves:
+            board.push(move)
+            score = -15
+            vec = fenToVec(board.fen())
+
+        
+            score = -(loaded_model_0(torch.tensor(vec).type(torch.float))).item()
 
             if score > best_score:
                 best_score = score

@@ -7,13 +7,14 @@ import random
 import chess
 import chess.pgn
 from datetime import datetime
-from custom_bot import bad_bot, my_bot, better_rand_bot
+from custom_bot import bad_bot, my_bot, better_rand_bot, better_rand_bot2
 
 
 BOTS = {
     "bad_bot": bad_bot,
     "my_bot" : my_bot,
-    "better_rand_bot" : better_rand_bot
+    "better_rand_bot" : my_bot,
+    "better_rand_bot2" : better_rand_bot2
 }
 
 class ChessBot:
@@ -60,7 +61,7 @@ def main():
     game = chess.pgn.Game()
     game.headers["Event"] = "CHESSBOT_COMPETITON"
     game.headers["White"] = "my_bot"
-    game.headers["Black"] = "better_rand_bot"
+    game.headers["Black"] = "better_rand_bot2"
     game.headers["Date"] = datetime.now()
     node = game
 
