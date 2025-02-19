@@ -6,6 +6,7 @@ import multiprocessing
 import random
 import chess
 import chess.pgn
+from datetime import datetime
 from custom_bot import bad_bot, my_bot
 
 
@@ -57,6 +58,7 @@ def main():
     game.headers["Event"] = "CHESSBOT_COMPETITON"
     game.headers["White"] = "my_bot"
     game.headers["Black"] = "my_bot"
+    game.headers["Date"] = datetime.now()
     node = game
 
     player = {
@@ -88,7 +90,7 @@ def main():
 
     game.headers["Result"] = board.result()
 
-    print(game, file=open("test.pgn", "w"), end="\n\n")
+    print(game, file=open("matches.pgn", "a+"), end="\n\n")
 
 
 
