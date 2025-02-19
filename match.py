@@ -36,9 +36,12 @@ class ChessBot:
                 process.terminate()
                 process.join()
 
-            if self.shared.best_move is not None:
+            if self.shared.best_move is None:
+                print("Player did not make a move in time. Choosing random move...")
+            elif self.shared.best_move not in board.legal_moves:
+                print(f"Player made an illegal move ({self.shared.best_move}). Choosing random move...")
+            else:
                 return self.shared.best_move
-            print("Player did not make a move in time ... Choosing random move")
         except KeyboardInterrupt as exc:
             if process:
                 process.terminate()
