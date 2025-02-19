@@ -22,7 +22,7 @@ def my_bot(shared, board: chess.Board):
     for move in board.legal_moves:
         board.push(move)
         score = 0
-        for piece in board.piece_map().values():
+        for piece in board.piece_map().values(): # does not take into account the actual piece-values
             if piece.color != board.turn:
                 score += piece.piece_type
             else:

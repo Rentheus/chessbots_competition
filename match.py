@@ -90,7 +90,8 @@ def main():
 
     game.headers["Result"] = board.result()
 
-    print(game, file=open("matches.pgn", "a+"), end="\n\n")
+    with open("matches.pgn", "a+", encoding="utf-8") as f:
+        f.write(str(game) + "\n\n")
 
 
 
