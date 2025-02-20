@@ -7,14 +7,20 @@ import random
 import chess
 import chess.pgn
 from datetime import datetime
-from custom_bot import bad_bot, my_bot, better_rand_bot, better_rand_bot2
+#from custom_bot import bad_bot, better_rand_bot, better_rand_bot2, better_rand_bot3
+from mod_mcts_bot import mod_mcts_bot, my_bot, geklauter_bot_bessere_eval
+from sil_bot import fick_sie_alle_bot
 
 
 BOTS = {
-    "bad_bot": bad_bot,
+    #"bad_bot": bad_bot,
     "my_bot" : my_bot,
-    "better_rand_bot" : my_bot,
-    "better_rand_bot2" : better_rand_bot2
+    #"better_rand_bot" : better_rand_bot,
+    #"better_rand_bot2" : better_rand_bot2,
+    #"better_rand_bot3" : better_rand_bot3,
+    "GernhardtReinlunzenBot" : mod_mcts_bot,
+    "fick_sie_alle_bot": fick_sie_alle_bot,
+    "geklauter_bot_neue_eval": geklauter_bot_bessere_eval
 }
 
 class ChessBot:
@@ -60,8 +66,8 @@ def main():
 
     game = chess.pgn.Game()
     game.headers["Event"] = "CHESSBOT_COMPETITON"
-    game.headers["White"] = "my_bot"
-    game.headers["Black"] = "better_rand_bot2"
+    game.headers["White"] = "geklauter_bot_neue_eval"
+    game.headers["Black"] = "fick_sie_alle_bot"
     game.headers["Date"] = datetime.now()
     node = game
 

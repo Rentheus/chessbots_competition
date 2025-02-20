@@ -65,31 +65,58 @@ model_2 = nn.Sequential(
 	
 )
 
+model_3 = nn.Sequential(
+	nn.Conv2d(12, 22, 4 ),
+	nn.Flatten(), #22x5x5
+	nn.Tanh(),
+	nn.Linear(550, 100),
+	nn.Tanh(),
+	nn.Linear(100,64),
+	nn.LeakyReLU(),
+	nn.Linear(64,4),
+	nn.Linear(4,1)
+	
+)
+
+model_4 = nn.Sequential(
+	nn.Conv2d(12, 22, 4 ),
+	nn.Flatten(), #22x5x5
+	nn.LeakyReLU(),
+	nn.Linear(550, 2400),
+	nn.LeakyReLU(),
+	nn.Linear(2400,64),
+	nn.LeakyReLU(),
+	nn.Linear(64,4),
+	nn.Linear(4,1)
+	
+)
+
+
 
 loss_fn = nn.L1Loss()
-optimizer = torch.optim.SGD(params = model_2.parameters(), lr = 0.015)
+optimizer = torch.optim.SGD(params = model_4.parameters(), lr = 0.015)
 
 
-epochs= 10000
+epochs= 20000
 train_loss_values = []
 test_loss_values = []
 epoch_count = []
 
 
 for epoch in range(epochs):
-    model_2.train()
-    val_pred = model_2(pos_train)
+    model_4.train()
+    val_pred = model_4(pos_train)
     loss = loss_fn(val_pred, val_train)
     optimizer.zero_grad()
     loss.backward()
     optimizer.step()
-    model_2.eval()
+    model_4.eval()
 	
 
 
     with torch.inference_mode():
       # 1. Forward pass on test data
-      test_pred = model_2(pos_test)
+      test_pred = model_4(pos_test)
 
       # 2. Caculate loss on test data
       test_loss = loss_fn(test_pred, val_test.type(torch.float)) # predictions come in torch.float datatype, so comparisons need to be done with tensors of the same type
@@ -104,7 +131,7 @@ for epoch in range(epochs):
 MODEL_PATH = Path("models")
 MODEL_PATH.mkdir(parents=True, exist_ok=True)
 
-MODEL_NAME = "01_pytorch_workflow_model_2.pth"
+MODEL_NAME = "01_pytorch_workflow_model_4.pth"
 MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
-torch.save(obj=model_2.state_dict(), # only saving the state_dict() only saves the models learned parameters
+torch.save(obj=model_4.state_dict(), # only saving the state_dict() only saves the models learned parameters
            f=MODEL_SAVE_PATH) 

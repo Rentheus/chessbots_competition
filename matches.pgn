@@ -78,3 +78,23 @@
 
 1. Nc3 c5 2. Na4 e5 3. Nxc5 Nf6 4. Nxd7 Ng4 5. Nxf8 h6 6. Nd7 e4 7. Nxb8 g5 8. f3 Qf6 9. fxg4 Rg8 10. Nd7 Qxf1+ 11. Kxf1 a6 12. e3 Ke7 13. c3 Ke8 14. Nb6 Rb8 15. Nxc8 Rxc8 16. Rb1 Rxc3 17. bxc3 b6 18. Rxb6 f5 19. Rxa6 fxg4 20. Qxg4 Rh8 21. Qxe4+ Kd7 22. Rxh6 Rxh6 23. Qh7+ Rxh7 24. Nh3 Re7 25. Nxg5 Kc6 26. h4 Ra7 27. Nf3 Kb5 28. Rg1 Kc4 29. Ne1 Kc5 30. g3 Kb6 31. e4 Ka6 32. g4 Kb6 33. d4 Ra6 34. Bh6 Ra7 35. Kf2 Ra6 36. Rg3 Ra7 37. Rd3 Ra6 38. Bg7 Ra7 39. Kg2 Rxg7 40. Kg1 Ra7 41. Rd2 Rxa2 42. Rxa2 Kb5 43. Nf3 Kc4 44. Nh2 Kb3 45. Ra4 Kb2 46. Ra1 Kxa1 47. d5 Kb2 48. e5 Kb3 49. Kh1 Kb2 50. Nf3 Kb3 51. g5 Kb2 52. Kg2 Kb3 53. e6 Kb2 54. Kg1 Kb3 55. Nh2 Kb2 56. Ng4 Kb3 57. d6 Kb2 58. Nh6 Kb3 59. c4 Kb2 60. g6 Kb3 61. h5 Kb2 62. e7 Kc3 63. e8=Q Kb2 64. Qe2+ Kc3 65. d7 Kb3 66. d8=Q Kc3 67. Qd6 Kb3 68. Qb8+ Kc3 69. g7 Kd4 70. g8=Q Kc3 71. Qee5+ Kd3 72. Qbb2 1/2-1/2
 
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-20 01:39:33.132279"]
+[Round "?"]
+[White "my_bot"]
+[Black "better_rand_bot3"]
+[Result "1/2-1/2"]
+
+1. c3 b5 2. f4 c5 3. f5 Qa5 4. b3 Qxc3 5. Nxc3 c4 6. bxc4 e5 7. cxb5 Bb4 8. Kf2 a6 9. bxa6 d6 10. e3 Nf6 11. Qg4 e4 12. Qxe4+ Nxe4+ 13. Nxe4 h6 14. Nxd6+ Kd7 15. Nxc8 Rxa6 16. Bxa6 Kc6 17. Nd6 Re8 18. Nxe8 g6 19. fxg6 Ba5 20. gxf7 Nxa6 21. f8=Q Kb6 22. Qxh6+ Kb5 23. Qxa6+ Kxa6 24. Ne2 Kb6 25. a4 Bb4 26. e4 Ba5 27. Nd4 Bb4 28. Ng7 Ba5 29. Kg3 Bb4 30. Rf1 Ba5 31. Ngf5 Bb4 32. e5 Ba5 33. Re1 Bb4 34. Rh1 Ba5 35. Nh4 Bb4 36. Kf3 Ba5 37. h3 Bb4 38. Bb2 Ba5 39. e6 Bb4 40. Rab1 Ba5 41. Kf2 Bb4 42. Rbc1 Ba5 43. Kg1 Bb4 44. Bc3 Ba5 45. Bxa5+ Ka6 46. Rh2 Kb7 47. Rc6 Ka8 48. Rc8+ Kb7 49. Rh1 Kxc8 50. Kf1 Kb7 51. Rg1 Ka6 52. Nb5 Kb7 53. g3 Kc6 54. g4 Kb7 55. Bc7 Kc6 56. Nc3 Kxc7 57. e7 Kb6 58. e8=Q Ka6 59. Qb5+ Ka7 60. a5 Ka8 61. Qc5 Kb7 62. Qg5 Kc6 63. Kf2 Kd7 64. Rb1 Kc6 65. Kg3 Kd7 66. Qf6 Kc8 67. Nf3 Kd7 68. Ng5 Ke8 69. Kh2 Kd7 70. d3 Ke8 71. Qg7 Kd8 72. Qb7 Ke8 73. Nf3 Kd8 74. Qb5 Kc8 75. Na2 Kc7 76. Nh4 Kc8 77. Rf1 Kc7 78. Rf8 Kd6 79. Ng6 Kc7 80. Qh5 Kc6 81. Qh4 Kb5 82. Ne5 Ka6 83. Rb8 Ka7 84. Nc4 Ka6 85. Re8 Kb5 86. Re5+ Kc6 87. Na3 Kc7 88. Kg3 Kc6 89. Nc4 Kd7 90. Qh8 Kc6 91. Qe8+ Kc7 92. Rc5+ Kb7 93. Qg6 Ka8 94. Qe4+ Ka7 95. Qg2 Ka6 96. Qe2 Kb7 97. Qh2 Ka6 98. Kf2 Kb7 99. Qh1+ Ka6 100. Qd5 Ka7 101. Nd2 Ka6 102. Rc6+ Kb7 103. Ne4 Ka8 104. Qe5 Kb7 105. Kg3 Kxc6 106. d4 Kd7 107. Qc7+ Kxc7 108. h4 Kc6 109. h5 Kb5 110. Nec3+ Kc6 111. Kf3 Kc7 112. Kf4 Kc6 113. Kg5 Kc7 114. Nc1 Kc6 115. h6 Kc7 116. Na4 Kc6 117. Kf5 Kb5 118. d5 Kxa5 119. Kf4 Kb5 120. Nb3 Kc4 121. Nac5 Kb4 122. Kf3 Kc4 123. Na1 Kd4 124. Kf4 Kc4 125. Ke3 Kxc5 126. g5 Kb6 127. Ke4 Kb5 128. Ke3 Kb6 129. Kf2 Kb5 130. Kf1 Kb6 131. h7 Kb5 132. h8=Q Kb6 133. g6 Kb5 134. Qh2 Kb6 135. Qg3 Kb5 136. Qe3 Kc4 137. Qb3+ Kd4 138. Qg3 Kc4 139. Qg1 Kd3 140. Qg2 Kd4 141. Nc2+ Kd3 142. Ne1+ Kd4 143. Kf2 Kc4 144. Qe4+ Kb5 145. Nd3 Kb6 146. Qg2 Kb5 147. Qg3 Kb6 148. Qg1 Kb5 149. Qd1 Kc4 150. Ke2 Kd4 151. Kf3 Kc4 152. Qc1+ Kxd3 153. Qd2+ Kxd2 154. Kf4 Kd3 155. d6 Kc4 156. g7 Kd3 157. g8=Q Kd4 158. Qg7+ Kc4 159. Qe7 Kd3 160. Qf8 Kc4 161. Qg8+ Kd3 162. Kf5 Kd4 163. Qc8 Kd3 164. Qc1 Kd4 165. Qd1+ Kc4 166. Kf4 Kb5 167. Kg4 Kc6 168. Qd5+ Kb6 169. Qd4+ Kc6 170. Qh8 Kb6 171. Kf5 Kc6 172. Qb8 Kd7 173. Qg8 Kc6 174. Qh8 Kd7 175. Qh1 Kxd6 176. Kg6 Ke5 177. Qh5+ Kd4 178. Qd1+ Kc4 179. Qe1 Kd4 180. Qf2+ Kc4 181. Qb2 Kd3 182. Qb5+ Kd4 183. Qd3+ Kxd3 1/2-1/2
+
+[Event "CHESSBOT_COMPETITON"]
+[Site "?"]
+[Date "2025-02-20 15:54:12.768961"]
+[Round "?"]
+[White "GernhardtReinlunzenBot"]
+[Black "my_bot"]
+[Result "1-0"]
+
+1. e4 Nh6 2. Nc3 c5 3. d4 cxd4 4. Qxd4 a5 5. Bxh6 gxh6 6. Qxh8 b5 7. Nxb5 Bb7 8. Qxh7 Bxe4 9. Qxe4 Bg7 10. Qxa8 Bxb2 11. Qxb8 Qxb8 12. Nf3 Bxa1 13. Nc3 Bxc3+ 14. Kd1 Qxh2 15. Rxh2 Bg7 16. Rh5 e5 17. Nxe5 Bxe5 18. Rxe5+ Kf8 19. Rxa5 Ke7 20. Be2 f5 21. Rxf5 h5 22. Rxh5 Kd8 23. Rd5 d6 24. Rxd6+ Ke7 25. Rb6 Kf7 26. Rb8 Ke6 27. Kd2 Kd7 28. Rh8 Kc7 29. Bg4 Kd6 30. Ke3 Kc7 31. Bf5 Kc6 32. g3 Kb6 33. Kd2 Ka5 34. Kc3 Ka6 35. Kd3 Kb5 36. Kd2 Kc6 37. Rg8 Kb6 38. Bg6 Kc6 39. Ke2 Kd6 40. Bh5 Ke7 41. Kf1 Kf6 42. c4 Ke6 43. Be8 Kf5 44. Bd7+ Ke4 45. Rf8 Ke5 46. Bh3 Kd4 47. Rc8 Ke5 48. Bg2 Kd6 49. Ra8 Kc5 50. Rc8+ Kd4 51. Kg1 Kd3 52. a4 Kc3 53. Kf1 Kd4 54. Bh1 Ke5 55. Ba8 Kd6 56. Rh8 Kc7 57. Bg2 Kd7 58. Be4 Ke6 59. Bd5+ Kd6 60. Be4 Ke5 61. Bg2 Kf5 62. Rc8 Kg4 63. Re8 Kf5 64. Rh8 Kg6 65. Rd8 Kh6 66. Ke1 Kg5 67. Be4 Kh5 68. Bc6 Kh6 69. Kd1 Kh5 70. Kc2 Kh6 71. a5 Kg6 72. a6 Kh5 73. a7 Kg4 74. a8=Q Kg5 75. Rb8 Kg4 76. Rc8 Kg5 77. Bg2 Kh6 78. Kb1 Kg6 79. Qb7 Kf5 80. c5 Ke6 81. Qb5 Kf6 82. c6 Kg7 83. Ka2 Kh6 84. Qb6 Kg7 85. Ra8 Kf7 86. Qb4 Kf6 87. c7 Ke5 88. c8=Q Kf6 89. Qbb8 Kg7 90. Ra6 Kf7 91. Qbb7# 1-0
+
