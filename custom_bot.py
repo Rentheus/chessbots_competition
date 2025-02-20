@@ -110,7 +110,7 @@ def better_rand_bot2(shared, board: chess.Board):
 
         for move in board.legal_moves:
             board.push(move)
-            score = -15
+            score = 0
             vec = fenToVec(board.fen())
 
         
@@ -119,5 +119,5 @@ def better_rand_bot2(shared, board: chess.Board):
             if score > best_score:
                 best_score = score
                 shared.best_move = move
-                print(score)
+                #print(score)
             board.pop()
