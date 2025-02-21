@@ -45,7 +45,7 @@ CHESS_VALUES = {
     chess.QUEEN:  9,
     chess.KING:   0,
 }
-M_DEPTH = 3
+M_DEPTH = 4
 M_INF = 999
 
 def evaluate_board(board: chess.Board, color: chess.Color) -> int:
@@ -163,5 +163,5 @@ def better_rand_bot(shared, board: chess.Board):
             if score > best_score:
                 best_score = score
                 shared.best_move = move
-                print(score)
+                # print(score)
             board.pop()

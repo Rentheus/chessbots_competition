@@ -2,7 +2,8 @@
 main file to test the custom bots
 """
 
-import multiprocessing
+import threading
+import ctypes
 import random
 import chess
 import chess.pgn
@@ -19,37 +20,45 @@ BOTS = {
 
 class ChessBot:
     def __init__(self, logic_func, name = "Bot") -> None:
-        manager = multiprocessing.Manager()
-        self.shared = manager.Namespace()
-        self.shared.best_move = None
         self.logic_func = logic_func
         self.name = name
+        self.shared = type('Namespace', (), {'best_move': None})()
+        self.error_count = [0, 0, 0]
 
     def generate_move(self, board: chess.Board, time_limit: int = 5) -> chess.Move:
         self.shared.best_move = None
-        process = None
-        try:
-            process = multiprocessing.Process(target=self.logic_func, args=(self.shared, board))
-            process.start()
-            process.join(timeout=time_limit)
 
-            if process.is_alive():
-                process.terminate()
-                process.join()
+        def worker():
+            try:
+                self.logic_func(self.shared, board.copy())
+            except SystemExit:
+                pass
+            except Exception as e:
+                print(f"Error in bot execution: {e}")
 
-            if self.shared.best_move is None:
-                print("Player did not make a move in time. Choosing random move...")
-            elif self.shared.best_move not in board.legal_moves:
-                print(f"Player made an illegal move ({self.shared.best_move}). Choosing random move...")
-            else:
-                return self.shared.best_move
-        except KeyboardInterrupt as exc:
-            if process:
-                process.terminate()
-                process.join()
-            raise SystemExit from exc
-        return random.choice(list(board.legal_moves))
+        thread = threading.Thread(target=worker)
+        thread.start()
+        thread.join(timeout=time_limit)
 
+        if thread.is_alive():
+            print("Time limit exceeded. Using best move found so far...")
+            self.error_count[0] += 1
+            exc = ctypes.py_object(SystemExit)
+            res = ctypes.pythonapi.PyThreadState_SetAsyncExc(
+                ctypes.c_long(thread.ident), exc)
+            if res > 1:
+                ctypes.pythonapi.PyThreadState_SetAsyncExc(thread.ident, None)
+
+        if self.shared.best_move is None:
+            print("No valid move found. Choosing random move...")
+            self.error_count[1] += 1
+            return random.choice(list(board.legal_moves))
+        if self.shared.best_move not in board.legal_moves:
+            print(f"Invalid move ({self.shared.best_move}). Choosing random move...")
+            self.error_count[2] += 1
+            return random.choice(list(board.legal_moves))
+
+        return self.shared.best_move
 
 
 def print_board(board):
@@ -75,12 +84,16 @@ def main():
 
     print("Initial Board:")
     print_board(board)
+    i = 0
 
     while not board.is_game_over():
         print("Player Turn:", "WHITE" if board.turn else "BLACK")
-        board.push(player[board.turn].generate_move(board.copy(), 1))
+        board.push(player[board.turn].generate_move(board, 1))
         print_board(board)
         node = node.add_variation(board.peek())
+        i = (i + 1) % 10
+        if not i:
+            print(threading.active_count(), "threads active.")
 
     if board.is_checkmate():
         print('Checkmate!', "Player", "WHITE" if not board.turn else "BLACK", "wins!")
@@ -95,6 +108,8 @@ def main():
     else:
         print('Unexpected game over!?')
     print("Match lasted for", len(board.move_stack), "turns.")
+    print(f"WHITE had {player[chess.WHITE].error_count[0]}/{player[chess.WHITE].error_count[1]} time limit errors and {player[chess.WHITE].error_count[2]} invalid moves.")
+    print(f"BLACK had {player[chess.BLACK].error_count[0]}/{player[chess.BLACK].error_count[1]} time limit errors and {player[chess.BLACK].error_count[2]} invalid moves.")
 
     game.headers["Result"] = board.result()
 
